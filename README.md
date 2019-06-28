@@ -35,14 +35,14 @@ It is tested with Nvidia Geforce GTX 1080 Ti.
 ./run.sh ~/test
 ```
 
-- Prepare tt100k dataset.
+- On Docker Bash shell, prepare tt100k dataset.
 
 ```bash
 cd tsinghua-tencent-100k && wget http://cg.cs.tsinghua.edu.cn/traffic-sign/data_model_code/data.zip && unzip data.zip && mkdir -p /data/lmdb
 cd code/script && ./prepare.sh
 ```
 
-- Train the tt100k dataset
+- On Docker Bash shell, train the tt100k dataset
 
 ```bash
 cd code/script && ./train.sh
