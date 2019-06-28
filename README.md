@@ -29,6 +29,7 @@ It is tested with Nvidia Geforce GTX 1080 Ti.
 
 ### Docker Run
 - Run docker image
+- For volumn binding, it needs host path parameter.(ex: ~/test)
 
 ```bash
 ./run.sh ~/test
