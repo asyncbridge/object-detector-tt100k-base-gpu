@@ -7,6 +7,9 @@ It is tested with Nvidia Geforce GTX 1080 Ti.
 
 ## Pre-built based on
 
+- Docker CE 18.06.2-ce 
+- Nvidia Docker2
+- Host O/S Nvidia Driver 418.87.00
 - Ubuntu 16.04
 - CUDA 8.0  
 - cuDNN 6.0  
@@ -29,20 +32,21 @@ It is tested with Nvidia Geforce GTX 1080 Ti.
 
 ### Docker Run
 - Run docker image
-- For volumn binding, it needs host path parameter.(ex: ~/test)
+- For volumn binding, it needs host path parameter and binding path parameter in Docker container.
 
 ```bash
-./run.sh ~/test
+./run.sh ~/data_folder /workspace/data_folder
 ```
 
 - On Docker Bash shell, prepare tt100k dataset.
 
 ```bash
-cd tsinghua-tencent-100k && wget http://cg.cs.tsinghua.edu.cn/traffic-sign/data_model_code/data.zip && unzip data.zip && mkdir -p /data/lmdb
-cd code/script && ./prepare.sh
+cd data_folder && wget http://cg.cs.tsinghua.edu.cn/traffic-sign/data_model_code/data.zip && unzip data.zip && mkdir -p /data/lmdb
+cd ../tsinghua-tencent-100k/code/script && ./prepare.sh
 ```
 
 - On Docker Bash shell, train the tt100k dataset
+- Before training, you need to set the dataset path in train_val.prototxt file. (/workspae/data_folder/data)
 
 ```bash
 cd code/script && ./train.sh

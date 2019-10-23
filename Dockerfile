@@ -8,8 +8,7 @@ RUN apt-get install -y python-tk
 RUN pip install --no-cache-dir werkzeug flask tornado numpy pandas pillow pyyaml opencv-python scikit-image matplotlib
 
 RUN mkdir /workspace
-RUN mkdir /workspace/tt100k
-WORKDIR /workspace/tt100k
+WORKDIR /workspace
 
 RUN git clone https://github.com/asyncbridge/tsinghua-tencent-100k.git
 RUN cd tsinghua-tencent-100k/code/script && ./compile.sh
