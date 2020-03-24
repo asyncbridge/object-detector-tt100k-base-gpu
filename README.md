@@ -1,7 +1,5 @@
 # Tsinghua-Tencent 100K Base Docker Container(GPU)
 
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-
 This repository is a base docker container for Tsinghua-Tencent 100K object detection docker container.  
 It is tested with Nvidia Geforce GTX 1080 Ti.
 
@@ -54,4 +52,11 @@ cd code/script && ./train.sh
 
 ## License
 
-This project is made available under the [MIT License](https://github.com/asyncbridge/object-detector-tt100k-base-gpu/blob/master/LICENSE).
+It is cited from:  
+
+@InProceedings{Zhe_2016_CVPR,
+author = {Zhu, Zhe and Liang, Dun and Zhang, Songhai and Huang, Xiaolei and Li, Baoli and Hu, Shimin},
+title = {Traffic-Sign Detection and Classification in the Wild},
+booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+year = {2016}
+}
